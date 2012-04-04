@@ -18,3 +18,11 @@ a {
 	float: left;
 	padding-right: 40px;
 }
+
+.table {
+	position:absolute;
+	right:100px;
+	top:250px;
+	background:#F2F2F2;
+	width:130px;
+}

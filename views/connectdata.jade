@@ -1,7 +1,15 @@
-
-//- if (!$con)
-//	die('Could not connect: ' . mysql_error());
-//- if (mysql_query("CREATE DATABASE my_db",$con))
-//		echo "Database created";
-//- else
-//		echo "Error creating database: " . mysql_error();
+div(class="table")	
+	table(bgcolor="#F2F2F2" , border ="2")
+		caption
+			| Regestration
+		tr	
+			td
+				pre
+				| Email
+				input(type="text" , size="25")
+				| Password
+				input(type="password", size="25")
+				input(type="submit", name="submit", value="Sine in")
+				hr(color="#808080" , width="100%")
+				INPUT(TYPE="BUTTON" , VALUE="Create New Account" ,
+				ONCLICK="window.location.href='/Account/Create'")
