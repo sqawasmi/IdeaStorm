@@ -61,6 +61,8 @@ app.get('/shaker',routes.shaker);
 app.get('/c2',routes.c2get);
 app.post('/c2',routes.c2post);
 
+app.get('/mysql-test',routes.mysqltest);
+
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode, my name is %s", app.address().port, app.settings.env, "Huda");
