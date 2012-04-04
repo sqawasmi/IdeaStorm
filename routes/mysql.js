@@ -8,7 +8,11 @@ function getTest(req, res, next) {
 		password: '123'
 	});
  
-	c.query( 'USE ' + DB +'sleep ');
+	c.query( 'USE ' + DB );
+	c.query(
+	  'INSERT INTO '+T+' '+
+	  '(x , y ) values(23,2)'
+	);
  
 	c.query(
 		'SELECT * FROM ' + T,

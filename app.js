@@ -3,10 +3,6 @@
  * Module dependencies.
  */
 
-
-
-
-
 var express = require('express'), routes = require('./routes');
 
 var app = module.exports = express.createServer();
@@ -66,54 +62,3 @@ app.get('/mysql-test',routes.mysqltest);
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode, my name is %s", app.address().port, app.settings.env, "Huda");
-
-
-
-
-
-var Client = require('mysql').Client;
-var client = new Client();
-
-client.user = 'someuser';
-client.password = '';
-
-console.log('Connecting to MySQL...');
-
-/*client.connect(function(error, results) {
-  if(error) {
-    console.log('Connection Error: ' + error.message);
-    return;
-  }
-  console.log('Connected to MySQL');
-  ClientConnectionReady(client);
-});
-*/
-//client._connection.on('connect', function() { client.query('use db');
-	
-ClientConnectionReady = function(client)
-{
-    client.query('USE vote', function(error, results) {
-        if(error) {
-            console.log('ClientConnectionReady Error: ' + error.message);
-            client.end();
-            return;
-        }
-        ClientReady(client);
-console.log("connect is good");
-    });
-};
-var d = client.query(
-    'SELECT email FROM user',
-    function selectCb(error, results, fields) 
-{
-
-	      // Uncomment these if you want lots of feedback
-	      console.log("'Results:'");
-	      console.log(results);
-	      console.log('Field metadata:');
-	      console.log(fields);
-	      //console.log(sys.inspect(results));
-}
-);
-//var d = client.query('select email from user');
-//console.log (d);
