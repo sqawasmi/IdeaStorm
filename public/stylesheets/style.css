@@ -1,0 +1,20 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #00B7FF;
+  background-image: url(idea.jpg);
+  background-color: #fff;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.error {
+	color:#c00;
+}
+
+.AccountFields {
+	float: left;
+	padding-right: 40px;
+}

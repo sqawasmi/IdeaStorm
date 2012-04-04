@@ -1,0 +1,14 @@
+p Welcome! #{fn} Hello #{fn2}
+p  hello #{idea}
+a(href='/Account/')
+	img(src="/images/createaccount.jpg", onclick="#{idea}=\"comment\"")
+	- #{idea}="comment"
+- if (idea=="comment")
+	p  hello #{idea}
+- if (idea=="idea")
+	p #{idea}
+//- $foo = "ahmad";
+//if ($foo=="ahmad")
+//		p #{$foo}
+//	else
+//		p good

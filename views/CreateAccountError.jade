@@ -1,0 +1,61 @@
+form(action ='Create' , method='post')
+			fieldset
+					legend Create Account
+					div
+						div(class="AccountFields")
+							label
+								| Enter your First name:
+							input(name='firstname')
+						- if (fn == "" && showerror == 1) 
+							span(class = "error") you forget to enter your first name
+					br
+					br
+					div
+						div(class="AccountFields")
+							label
+							| Enter your Last name:
+							input(name='lastname')
+						- if (ln == "" && showerror == 1) 
+							span(class = "error") you forget to enter your last name
+					br
+					br
+					div
+						div(class="AccountFields")
+							label
+								| Enter E-mail:
+							input(name='email')
+						- if (email == "" && showerror == 1) 
+							span(class = "error") you forget to enter your email
+					br
+					br
+					div
+						div(class="AccountFields")
+							label
+							| location:
+							input(name='location')
+					br
+					br
+					div
+						div(class="AccountFields")
+							label
+							| Password:
+							input(name='password' , type="password" )
+						- if (pass == "" && showerror == 1) 
+								span(class = "error") you forget to enter your password
+						- else if (pass != repass && showerror == 1)
+								span(class = "error") your password didn't match
+					br
+					br
+					div
+						div(class="AccountFields")
+							label
+							| Repeat your password:
+							input(name='repeatpass' , type="password")
+					br
+					br
+					label
+					input(type="submit", name='submit', value = "Submit")
+					br
+					br
+					label
+					input(type="reset", name='clear information', value = "reset")
