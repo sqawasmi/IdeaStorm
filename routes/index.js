@@ -1,4 +1,4 @@
-
+mysql_conn = require('./mysql.js');
 /*
  * GET home page.
  */
@@ -108,4 +108,8 @@ exports.act = function(req,res){
 };
 exports.idea = function(req, res){
   res.render('Interface', { title: 'Account/Create'});
+};
+
+exports.mysqltest = function(req, res) {
+	mysql_conn.test(req, res);
 };
