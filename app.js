@@ -114,4 +114,4 @@ var d = client.query(
 }
 );
 //var d = client.query('select email from user');
-console.log (d);
+//console.log (d);
