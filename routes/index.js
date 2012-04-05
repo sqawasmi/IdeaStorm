@@ -113,3 +113,6 @@ exports.idea = function(req, res){
 exports.mysqltest = function(req, res) {
 	mysql_conn.test(req, res);
 };
+exports.mysqltestInsert = function(req, res) {
+	mysql_conn.testInsert(req, res);
+};
